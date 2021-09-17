@@ -206,5 +206,5 @@ Student.prototype.scopeArrow = () => console.log(this);
 
 
 // refers to the object (joe)
-// refers to the object (joe)
+//        refers to the object (joe)
 // the ''this'' keyword is bound to different values based on the context in which the function is called
