@@ -108,54 +108,52 @@ const newObject = array => ({
 
 
 
-let sum = (a, b, c, d) =>  {
-  return a + b + c + d;
-};
-
+let sum = (a, b, c, d) => a + b + c + d;
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(sum(1, 2, 3, 4));
+console.log(sum(1, 2, 3, 4));
 
 
-let objectLit = () =>{
-  return {
-    key1: 'value1',
-    key2: 'value2',
-    key3: 'value3',
-  };
-};
+
+let objectLit = () =>({
+    
+    val1 :'value1', val2: 'value2', val3: 'value3'
+
+});
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // console.log(objectLit());
 
 
-let sumAndProduct = (a, b) =>{
-  let sum = a + b;
-  let product = a * b;
-  return [sum, product];
-};
 
+let sumAndProduct = (a, b) =>{
+
+    let sum = a + b;
+    let pro = a * b;
+    return [sum, pro];
+    };
 // TODO: Uncomment the following line of code to see the output in the browser console
 // console.log(sumAndProduct(3, 9));
 
 
-let message = (name) =>{
-  return `Hello, ${name}!`;
-};
+
+let message = (name) => `Hello, ${name}!`;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // console.log(message('Allie'));
 // 
 
-class Student { 
-    constructor(name, age, hometown){
-  this.name = name;
-  this.age = age;
-  this.hometown = hometown;
-  
-};
-}
- let joe = new Student('Joe', 'Schmoe', 100);
 
+class Student{
+ constructor(name, age, hometown) {
+    this.name = name;
+    this.age = age;
+    this.hometown = hometown;
+    }
+    greeting() { 
+    return `Hi, my name is ${this.name}`;
+    }
+    }
+    let joe = new Student('Joe', 'Schmoe', 100);
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this code to break!
 console.log(joe);
@@ -175,10 +173,10 @@ Student.prototype.greeting = (Student) => `Hi, my name is ${joe.name}`;
 
 
 
-Student.courseName = () =>{
-  return 'This student is enrolled in Code 301.';
-};
 
+Student.courseName = () =>{
+ return 'This student is enrolled in Code 301.'
+    };
 // TODO: Uncomment the following line of code to see the output in the browser console
 // console.log(Student.courseName());
 
@@ -205,3 +203,8 @@ Student.prototype.scopeArrow = () => console.log(this);
 //
 // 3. Explain why "this" is different when an arrow function is used.
 //
+
+
+// refers to the object (joe)
+// refers to the object (joe)
+// the ''this'' keyword is bound to different values based on the context in which the function is called
